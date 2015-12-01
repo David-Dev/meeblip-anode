@@ -1,0 +1,16 @@
+[Oo]bj/
+[Bb]in/
+
+# Visual Studio 2015 cache/options directory
+.vs/
+packages/
+*.user
+TestResults/
+*.vspx
+*.vspscc
+*.vssscc
+*.suo
+*.[Cc]ache
+*.csproj.user
+*.psess
+*.trx
