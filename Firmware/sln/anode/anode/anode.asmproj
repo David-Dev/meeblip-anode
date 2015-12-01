@@ -15,7 +15,7 @@
     <Name>anode</Name>
     <RootNamespace>anode</RootNamespace>
     <ToolchainFlavour>Native</ToolchainFlavour>
-    <EntryFile>$(MSBuildProjectDirectory)\main.asm</EntryFile>
+    <EntryFile>$(MSBuildProjectDirectory)\..\..\..\anode.asm</EntryFile>
     <KeepTimersRunning>true</KeepTimersRunning>
     <OverrideVtor>false</OverrideVtor>
     <CacheFlash>true</CacheFlash>
@@ -66,8 +66,69 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="main.asm">
+    <Compile Include="..\..\..\anode.asm">
       <SubType>Code</SubType>
+      <Link>anode.asm</Link>
+    </Compile>
+    <Compile Include="..\..\..\dca_output.inc">
+      <SubType>Code</SubType>
+      <Link>dca_output.inc</Link>
+    </Compile>
+    <Compile Include="..\..\..\digital_filter.inc">
+      <SubType>Code</SubType>
+      <Link>digital_filter.inc</Link>
+    </Compile>
+    <Compile Include="..\..\..\envelope.inc">
+      <SubType>Code</SubType>
+      <Link>envelope.inc</Link>
+    </Compile>
+    <Compile Include="..\..\..\filter_modulation.inc">
+      <SubType>Code</SubType>
+      <Link>filter_modulation.inc</Link>
+    </Compile>
+    <Compile Include="..\..\..\initialize.inc">
+      <SubType>Code</SubType>
+      <Link>initialize.inc</Link>
+    </Compile>
+    <Compile Include="..\..\..\lfo.inc">
+      <SubType>Code</SubType>
+      <Link>lfo.inc</Link>
+    </Compile>
+    <Compile Include="..\..\..\lookup_tables.inc">
+      <SubType>Code</SubType>
+      <Link>lookup_tables.inc</Link>
+    </Compile>
+    <Compile Include="..\..\..\midi_in.inc">
+      <SubType>Code</SubType>
+      <Link>midi_in.inc</Link>
+    </Compile>
+    <Compile Include="..\..\..\note_handler.inc">
+      <SubType>Code</SubType>
+      <Link>note_handler.inc</Link>
+    </Compile>
+    <Compile Include="..\..\..\sample_generation.inc">
+      <SubType>Code</SubType>
+      <Link>sample_generation.inc</Link>
+    </Compile>
+    <Compile Include="..\..\..\scan_knobs.inc">
+      <SubType>Code</SubType>
+      <Link>scan_knobs.inc</Link>
+    </Compile>
+    <Compile Include="..\..\..\scan_switches.inc">
+      <SubType>Code</SubType>
+      <Link>scan_switches.inc</Link>
+    </Compile>
+    <Compile Include="..\..\..\subroutines.inc">
+      <SubType>Code</SubType>
+      <Link>subroutines.inc</Link>
+    </Compile>
+    <Compile Include="..\..\..\variable_definitions.inc">
+      <SubType>Code</SubType>
+      <Link>variable_definitions.inc</Link>
+    </Compile>
+    <Compile Include="..\..\..\wavetables.inc">
+      <SubType>Code</SubType>
+      <Link>wavetables.inc</Link>
     </Compile>
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Assembler.targets" />
